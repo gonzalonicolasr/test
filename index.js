@@ -12,6 +12,7 @@ const loadContent = async (url) => {
   const response = await fetch(url);
   const content = await response.text();
   mainContent.innerHTML = content;
+
   // Ejecutar scripts embebidos en el contenido cargado
   const scripts = mainContent.querySelectorAll('script');
   scripts.forEach((script) => {
@@ -21,6 +22,13 @@ const loadContent = async (url) => {
     document.body.appendChild(newScript);
     document.body.removeChild(newScript); // Remover el script para evitar duplicados
   });
+
+  // Inicializar funcionalidades específicas de cada vista
+  if (url.endsWith('login.html')) {
+    initLogin();
+  } else if (url.endsWith('register.html')) {
+    initRegister();
+  }
 };
 
 const handleNavigation = (page) => {
@@ -48,3 +56,18 @@ menuHeaderImg.addEventListener("click", mostrarMenu);
 
 // Cargar contenido inicial
 handleNavigation('home');
+
+// Funciones para inicializar las vistas específicas
+const initLogin = () => {
+  // Importa el contenido de login.js aquí
+  import('./login.js').then(module => {
+    module.initLogin();
+  });
+};
+
+const initRegister = () => {
+  // Importa el contenido de register.js aquí
+  import('./register.js').then(module => {
+    module.initRegister();
+  });
+};
