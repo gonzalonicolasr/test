@@ -1,45 +1,27 @@
-const menuHeaderImg = document.querySelector(".menu-label");
-const menuList = document.querySelector(".nav-list");
-const mainContent = document.getElementById("main-content");
+// elementos del DOM
+const menuHeaderImg= document.querySelector(".menu-label")
+const menuList = document.querySelector(".nav-list")
 
-const routes = {
-  home: '/views/home.html',
-  login: '/views/login.html',
-  register: '/views/register.html',
-};
 
-const loadContent = async (url) => {
-  const response = await fetch(url);
-  const html = await response.text();
-  mainContent.innerHTML = html;
-};
+//  secccion de mostrar menu
 
-const handleNavigation = (event) => {
-  event.preventDefault();
-  const target = event.target;
-  if (target.tagName.toLowerCase() === 'a') {
-    const route = target.getAttribute('href').substring(1); // Remove leading '#'
-    if (routes[route]) {
-      loadContent(routes[route]);
-      if (route === 'login') {
-        import('./login.js').then(module => {
-          module.initLogin();
-        });
-      } else if (route === 'register') {
-        import('./register.js').then(module => {
-          module.initRegister();
-        });
-      }
-    }
+const mostrarMenu = () =>{
+
+  menuList.classList.toggle("open-nav");
+  if (menuDeFavorito.classList.contains("open-favorite")) {
+    menuDeFavorito.classList.remove("open-favorite");
+    return;
   }
-};
 
-menuList.addEventListener('click', handleNavigation);
+}
+
+
+// funcion init
 
 const init = () => {
-  menuHeaderImg.addEventListener("click", () => {
-    menuList.classList.toggle("open-nav");
-  });
-};
+  menuHeaderImg.addEventListener("click", mostrarMenu)
 
-init();
+
+}
+
+init()
