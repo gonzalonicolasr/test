@@ -1,0 +1,416 @@
+@media (max-width: 1280px) {
+  
+ 
+    .div-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    } 
+           
+  .noti-heart img{
+    display: none;
+      }
+      
+      .div.hero p{
+        text-align: center;
+      }
+}
+    
+     /* ------------------------------- */
+     @media (max-width: 1060px){
+
+      #menu-toggle:checked + .nav-list {
+        display: flex;
+      }
+    
+      .menu-label {
+        display: flex;
+        order: 2;
+        font-size: 25px;
+        color: antiquewhite;
+        right: 90px;
+        
+      } 
+      .open-nav{
+        display: flex;
+      }
+      .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        right: 30px;
+        background-color: rgb(22, 22, 22);
+        width: 150px;
+        padding: 10px;
+        border-radius: 0 0 15px 15px;
+        border: 2px solid #6b6b83;
+  z-index: 2;
+  display: none;
+    
+           } 
+           
+ 
+
+          /* pag index */
+          
+  .noti-heart img{
+    display: none;
+      }
+      
+      .div.hero p{
+        text-align: center;
+      }
+      /* ------------- */
+
+      /* pag principal */
+
+ .carousel{
+  display: none;
+}
+.soy-p{
+  text-align: center;
+  width: 800px;
+
+}
+
+     }
+
+     /*--------------max-width 960----------  */
+ @media (max-width: 960px) {
+    
+  #menu-toggle:checked + .nav-list {
+    display: flex;
+       
+    transform: translateY(-150%);
+  transition: transform 0.9s ease;
+  } 
+
+  .menu-label {
+    display: flex;
+    
+    font-size: 25px;
+    color: rgba(250, 235, 215, 0.992);
+    right: 90px;
+    
+  }
+  header{
+    position: fixed;
+  }
+
+  
+  .favorites-dropdown {
+ 
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    padding: 40px 20px;
+    background: rgb(16, 16, 16);
+  border: 2px solid #6b6b83;
+ 
+  }
+/* 
+  
+.open-favorite {
+  transform: scale(1);
+  opacity: 1; 
+ 
+} */
+  /*  PAGIG DE INDEX.HTML */
+
+  .noti-heart img{
+display: none;
+  }
+  
+  .div.hero p{
+    text-align: center;
+  }
+  
+  .closed-nav{
+    display: none;
+  } 
+ .open-nav{
+    display: flex;
+  } 
+
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    background-color: rgb(22, 22, 22);
+    width: 150px;
+    padding: 7px;
+    border-radius: 0 0  15px 15px;
+    border: 2px solid #6b6b83;
+    border-top: none;
+ 
+   } 
+   .nav-list a{
+    font-size: 18px;
+   }
+    
+  
+  header img{
+    width: 100px;
+    height: 60px;
+  }
+
+  h1{
+    font-size: 35px;
+  }
+
+  .div-we h2, .soy-h2{
+    font-size: 25px;
+  }
+  .div-hero h2{
+    font-size: 20px;
+  }
+  .div-hero p {
+    width: 500px;
+  }
+
+  .div-conteiner-form{
+    width: 400px;
+  }
+
+
+ .carousel{
+    display: none;
+ }
+
+ .soy-p{
+    text-align: center;
+    font-size: 20px;
+    width: 500px;
+ }
+
+/* -------ABOUNT US---------- */
+.section-abount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteiner-abount {
+  display: block;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.about-us {
+  margin: 0;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* flex: 1; */
+  
+}
+
+.values{
+  width: 200px;
+  height: 400px;
+  
+}
+.values p{
+  text-align: center;
+}
+
+/* -----------categories---------- */
+.categories{
+  display: block;
+  text-align: center;
+  
+}
+.category{
+  font-size: 17px;
+}
+
+footer img{
+width: 100px;
+height: 60px;
+}
+
+}
+/* ***********************************************
+************************************************* */
+ /* -----------max-width 560------------------- */
+ @media (max-width:560px) {
+
+
+  main{
+    margin-left: 10%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    font-size: 20px;
+    color: antiquewhite;
+    right: 90px;
+  } 
+
+  .nav-list a, .favorite-a{
+    font-size: 20px;
+  }
+
+  header img{
+    padding-left: 10px;
+    width: 90px;
+    height: 60px;
+  }
+
+  .nav-list a:hover{
+    color: #6b6b83;
+    text-decoration:underline;
+  }
+
+  .favorites-dropdown {
+ 
+    position: absolute;
+    top: 65px;
+    right: 0;
+    padding: 25px ;
+    background: rgb(16, 16, 16);
+  border: 2px solid #6b6b83;
+  height: 90vh;
+  }
+
+  
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 250px;
+ /* border-bottom: 1px solid #ddd; */
+gap: 15px;
+}
+/* pg index */
+h1{
+  margin-top: 20%;
+}
+    .div-hero p {
+        width: 350px;
+        text-align: center;
+      }
+
+      .inicio-section p{
+        width: 350px;
+        
+      }
+      .inicio-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .booton{
+        display: flex;
+        flex-direction: column;
+      }
+      .div-conteiner-form p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+      }
+
+      .div-conteiner-form h2{
+        margin-top: 15px;
+      }
+
+      /* pag principal */
+      .category-section h3{
+        width: 350px;
+      }
+      
+      .categories{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+      }
+ .favorites-container {
+  position: relative;
+  right: 15px;
+ }
+ .favorites-dropdown{
+  right: 35px;
+  max-width: 30px;
+ }
+ 
+
+.soy-p{
+  width: 350px;
+}
+.about-us{
+  display: flex;
+  flex-direction: column;
+  
+}
+.noti-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+}
+.noti-item h3{
+  width: 300px;
+}
+
+.noti-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p-more{
+  width: 350px;
+  margin-right: 25px;
+  text-align: center;
+}
+/* formulario */
+.div-conteinerForm{
+  width: 350px;
+}
+
+.values{
+  width: 350px;
+  height: 200px;
+}
+
+.conteiner-principal h3{
+  text-align: center;
+  width: 300px;
+}
+
+      .div-conteiner-form{
+        width: 300px;
+      }
+
+      .form-input, .input_numero{
+        width: 220px;
+      }
+/* footer */
+   
+   footer{
+    width: 100%;
+   }
+      
+      footer img{
+      
+        width: 100px;
+        height: 60px;
+      }
+      footer p, .footer-a{
+        color: #12c2e9;
+        font-size: 15px;
+        padding: 15px;
+      }
+    
+ }
