@@ -1,79 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/accesorio/estilo/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Seymour+One&family=Song+Myung&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="/accesorio/estilo/mediaqueri.css">
-    
-    <title>Todo Noticias</title>
-  </head>
-  <body>
-    <div id="app">
-<header>
-  <img class="logo" src="/img/noticias_innobadoras-removebg-preview.png" alt="">
-<nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/accesorio/estilo/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Seymour+One&family=Song+Myung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="/accesorio/estilo/mediaqueri.css">
+  <title>Todo Noticias</title>
+</head>
+<body>
+<div id="app">
+  <header>
+    <img class="logo" src="img/noticias_innobadoras-removebg-preview.png" alt="">
+    <nav>
       <div class="menu-label">
         <i class="fa-solid fa-bars"></i>
       </div>
       <ul class="nav-list">
-        <li><a href="">Home</a></li>
-        <li><a href="./inicio-sesion">Iniciar sesiòn</a></li>
-        <li><a href="./register" class="register-we">Registrarse</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inicio-secion.html">Iniciar sesión</a></li>
+        <li><a href="/register.html" class="register-we">Registrarse</a></li>
       </ul>
-</nav>
-
-</header>
-<main>
-  <section class="section-inicio" id="inicio">
-    <h1>  Esto es Todo Noticias</h1>
-    <div class="conteiner-home">
-      <div class="div-hero" >
-       
-         <p>En Todo Noticias, nos dedicamos a proporcionarte las noticias más relevantes y actuales del mundo. Nuestro equipo de periodistas y expertos trabaja incansablemente para ofrecerte informes precisos y objetivos, cubriendo una amplia gama de temas que incluyen política, economía, tecnología, salud, deportes y cultura.</p>
-                   
+    </nav>
+  </header>
+  <main>
+    <section class="section-inicio" id="inicio">
+      <h1>Esto es Todo Noticias</h1>
+      <div class="conteiner-home">
+        <div class="div-hero">
+          <p>En Todo Noticias, nos dedicamos a proporcionarte las noticias más relevantes y actuales del mundo. Nuestro equipo de periodistas y expertos trabaja incansablemente para ofrecerte informes precisos y objetivos, cubriendo una amplia gama de temas que incluyen política, economía, tecnología, salud, deportes y cultura.</p>
+        </div>
+        <div class="noti-heart">
+          <img src="img/Todo_Noticias-removebg-preview.png" alt="">
+        </div>
       </div>
-
-      <div class="noti-heart">
-       <img src="img/Todo_Noticias-removebg-preview.png" alt="">
-      
-     </div>
-   </div>
-     
-
-
-   
-
-<section class="inicio-section">
-  <p><em><b> Inicia secion o registrate para mas acceso... ve 👍</b></em></p>
-  <div class="booton">
-    <a href="inicio-secion.html" class="booton-noti">
-      <span class="booton-span">Iniciar sesiòn</span>
-    </a>
-    <a href="register.html"
-     class="booton-noti">
-      <span class="booton-span">Registrarse</span>
-    </a>
-  </div>
-</div></section>
-
-
-</main>
-<footer>
-  <p>Vanesa Romeo</p>
-  <img class="logo" src="img/noticias_innobadoras-removebg-preview.png" alt="">
-<a class="footer-a" href="">cel:2664221109</a>
-</footer>
-
-
-      
-    </div>
- 
-    <script src="index.js"></script> 
-  </body>
+    </section>
+    <section class="inicio-section">
+      <p><em><b>Inicia sesión o regístrate para más acceso... ve 👍</b></em></p>
+      <div class="booton">
+        <a href="/inicio-secion.html" class="booton-noti">
+          <span class="booton-span">Iniciar sesión</span>
+        </a>
+        <a href="/register.html" class="booton-noti">
+          <span class="booton-span">Registrarse</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Vanesa Romeo</p>
+    <img class="logo" src="img/noticias_innobadoras-removebg-preview.png" alt="">
+    <a class="footer-a" href="tel:2664221109">cel:2664221109</a>
+  </footer>
+</div>
+<script src="index.js"></script>
+</body>
 </html>
