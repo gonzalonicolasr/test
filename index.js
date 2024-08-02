@@ -10,64 +10,36 @@ const routes = {
 
 const loadContent = async (url) => {
   const response = await fetch(url);
-  const content = await response.text();
-  mainContent.innerHTML = content;
+  const html = await response.text();
+  mainContent.innerHTML = html;
+};
 
-  // Ejecutar scripts embebidos en el contenido cargado
-  const scripts = mainContent.querySelectorAll('script');
-  scripts.forEach((script) => {
-    const newScript = document.createElement('script');
-    newScript.src = script.src;
-    newScript.type = script.type;
-    document.body.appendChild(newScript);
-    document.body.removeChild(newScript); // Remover el script para evitar duplicados
-  });
-
-  // Inicializar funcionalidades específicas de cada vista
-  if (url.endsWith('login.html')) {
-    initLogin();
-  } else if (url.endsWith('register.html')) {
-    initRegister();
+const handleNavigation = (event) => {
+  event.preventDefault();
+  const target = event.target;
+  if (target.tagName.toLowerCase() === 'a') {
+    const route = target.getAttribute('href').substring(1); // Remove leading '#'
+    if (routes[route]) {
+      loadContent(routes[route]);
+      if (route === 'login') {
+        import('./login.js').then(module => {
+          module.initLogin();
+        });
+      } else if (route === 'register') {
+        import('./register.js').then(module => {
+          module.initRegister();
+        });
+      }
+    }
   }
 };
 
-const handleNavigation = (page) => {
-  const route = routes[page];
-  if (route) {
-    loadContent(route);
-  } else {
-    loadContent(routes['home']);
-  }
-};
+menuList.addEventListener('click', handleNavigation);
 
-document.addEventListener('click', (e) => {
-  if (e.target.matches('[data-page]')) {
-    e.preventDefault();
-    const page = e.target.getAttribute('data-page');
-    handleNavigation(page);
-  }
-});
-
-const mostrarMenu = () => {
-  menuList.classList.toggle("open-nav");
-};
-
-menuHeaderImg.addEventListener("click", mostrarMenu);
-
-// Cargar contenido inicial
-handleNavigation('home');
-
-// Funciones para inicializar las vistas específicas
-const initLogin = () => {
-  // Importa el contenido de login.js aquí
-  import('./login.js').then(module => {
-    module.initLogin();
+const init = () => {
+  menuHeaderImg.addEventListener("click", () => {
+    menuList.classList.toggle("open-nav");
   });
 };
 
-const initRegister = () => {
-  // Importa el contenido de register.js aquí
-  import('./register.js').then(module => {
-    module.initRegister();
-  });
-};
+init();
