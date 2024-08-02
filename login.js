@@ -1,4 +1,3 @@
-// importamos la libreria confeti previamente instalada y la ejecutamos en un input de registro
 import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 

@@ -1,4 +1,3 @@
-// importamos la libreria confeti previamente instalada y la ejecutamos en un input de registro
 import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 
@@ -192,7 +191,7 @@ const formValid = (e) => {
 
     vilocalStorage(array);
     alert("Tu registro fue un exito");
-    window.location.href = "/vistas/inicio-sesion.html"; // Asegúrate de que la ruta sea correcta
+    window.location.href = "/inicio-sesion.html"; // Asegúrate de que la ruta sea correcta
   }
 };
 
